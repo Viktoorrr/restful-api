@@ -7,7 +7,7 @@ use App\Models\Group;
 class GroupController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Return a list of groups with their customers.
      */
     public function index()
     {
@@ -15,8 +15,8 @@ class GroupController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */ 
+     * Return a single group by ID with its customers.
+     */  
     public function show($id)
     {
         return Group::with('customers')->findOrFail($id);

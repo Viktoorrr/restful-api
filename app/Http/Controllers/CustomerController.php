@@ -11,7 +11,7 @@ use App\Http\Resources\CustomerCollection;
 class CustomerController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Return a list of customers with their groups.
      */
     public function index()
     {
@@ -19,13 +19,16 @@ class CustomerController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     */    
+     * Return a single customer by ID with its groups.
+     */  
     public function show($id)
     {
         return Customer::with('groups')->findOrFail($id);
     }
 
+    /**
+     * Create a new customer with its groups.
+     */
     public function store(StoreCustomerRequest $request)
     {
         $customer = Customer::create($request->validated());
@@ -35,6 +38,9 @@ class CustomerController extends Controller
         return new CustomerResource($customer);
     }
 
+    /**
+     * Update an existing customer.
+     */
     public function update(UpdateCustomerRequest $request, Customer $customer)
     {
         $customer->update($request->validated());
@@ -46,7 +52,9 @@ class CustomerController extends Controller
         return new CustomerResource($customer);
     }
 
-
+    /**
+     * Delete a customer.
+     */
     public function destroy(Customer $customer)
     {
         $customer->delete();

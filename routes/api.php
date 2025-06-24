@@ -9,5 +9,6 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
+// RESTful routes (index, store, show, update, destroy)
 Route::apiResource('customers', CustomerController::class);
 Route::apiResource('groups', GroupController::class);
