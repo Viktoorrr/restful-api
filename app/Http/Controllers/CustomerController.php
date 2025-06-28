@@ -23,7 +23,7 @@ class CustomerController extends Controller
      */  
     public function show($id)
     {
-        return Customer::with('groups')->findOrFail($id);
+        return new CustomerResource(Customer::with('groups')->findOrFail($id));
     }
 
     /**
