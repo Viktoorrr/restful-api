@@ -1,13 +1,8 @@
 # SIMPLO – Laravel REST API
 
-This is a simple REST API built with Laravel. It allows you to manage customers and assign them to predefined groups.
+This is a simple REST API built with Laravel. It allows you to manage customers and assign them to predefined groups. 
 
----
-
-## Project Assignment
-
-You can find the project assignment here:  
-[https://github.com/simplo-sro/job-php-programmer](https://github.com/simplo-sro/job-php-programmer)
+> **The full task is described here:** [https://github.com/simplo-sro/job-php-programmer](https://github.com/simplo-sro/job-php-programmer)
 
 ---
 
@@ -39,7 +34,7 @@ Each customer can belong to zero or more groups.
 
 ---
 
-## How to run the Project?
+## How to run the project?
 
 > **Note:** Make sure you have a local server running (like **XAMPP**, Docker,..).
 
@@ -70,7 +65,7 @@ php artisan migrate:fresh --seed
 php artisan serve
 ```
 
-## 4. Test the API
+## 4. Send test requests
 
 Use **Postman** (or any API testing tool) to send requests to:
 
