@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Group;
+use App\Http\Resources\GroupResource;
+use App\Http\Resources\GroupCollection;
 
 class GroupController extends Controller
 {
@@ -11,7 +13,7 @@ class GroupController extends Controller
      */
     public function index()
     {
-        return Group::with('customers')->get();
+        return new GroupCollection(Group::with('customers')->get());
     }
 
     /**
@@ -19,6 +21,6 @@ class GroupController extends Controller
      */  
     public function show($id)
     {
-        return Group::with('customers')->findOrFail($id);
+        return new GroupResource(Group::with('customers')->findOrFail($id));
     }
 }
