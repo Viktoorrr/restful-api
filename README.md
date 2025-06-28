@@ -4,6 +4,13 @@ This is a simple REST API built with Laravel. It allows you to manage customers 
 
 ---
 
+## Project Assignment
+
+You can find the project assignment here:  
+[https://github.com/simplo-sro/job-php-programmer](https://github.com/simplo-sro/job-php-programmer)
+
+---
+
 ## Entities
 
 > **Note:** All responses include related entities (e.g. customers include their groups, and groups include their customers).
