@@ -42,7 +42,7 @@ Each customer can belong to zero or more groups.
 
 ## 1. Configure your database
 
-- Open the `.env` file and set your own database information:
+Open the `.env` file and set your own database information:
 
 ```env
 DB_CONNECTION=mysql
