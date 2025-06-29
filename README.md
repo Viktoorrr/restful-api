@@ -6,13 +6,11 @@ This is a simple REST API built with Laravel. It allows you to manage customers 
 
 ---
 
-## Entities
+## Entities:
 
 > **Note:** All responses include related entities (e.g. customers include their groups, and groups include their customers).
 
----
-
-### Customer
+### 1. Customer
 
 Represents an individual customer.
 
@@ -23,7 +21,7 @@ Represents an individual customer.
 - `PUT/PATCH /api/customers/{id}` – Update an existing customer
 - `DELETE /api/customers/{id}` – Delete a customer
 
-### Group
+### 2. Group
 
 Groups are predefined and seeded into the database (e.g. “Alpha”, “Beta”, “Gamma”).  
 Each customer can belong to zero or more groups.
@@ -38,9 +36,7 @@ Each customer can belong to zero or more groups.
 
 > **Note:** Make sure you have a local server running (like **XAMPP**, Docker,..).
 
----
-
-## 1. Configure your database
+### 1. Configure your database
 
 Open the `.env` file and set your own database information:
 
@@ -53,19 +49,19 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-## 2. Run migrations and seeders
+### 2. Run migrations and seeders
 
 ```bash
 php artisan migrate:fresh --seed
 ```
 
-## 3. Start the server
+### 3. Start the server
 
 ```bash
 php artisan serve
 ```
 
-## 4. Send test requests
+### 4. Send test requests
 
 Use **Postman** (or any API testing tool) to send requests to:
 
